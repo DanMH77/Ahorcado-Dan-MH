@@ -1,0 +1,93 @@
+
+body{
+    background-image: url(https://images.wsj.net/im-766475?width=700&height=482);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imgClass{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.dad{
+    display: flex;
+    align-items: center;
+}
+
+.parts{
+    display: flex;
+    justify-content: end;
+    margin-right: 300px;
+    margin-top: 60px;
+    max-width: 200px;
+    max-height: 200px;
+
+}
+
+#options{
+    font-size: small;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 200px;
+    max-width: 700px;
+    padding-right: 200px;
+}
+
+
+.keys{
+   background-image: url(data:image/png;base64,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) ;
+   background-size: cover;
+   color: white;
+   font-size: 20px;
+   margin: 10px;
+   padding: 10px;
+   display:flex ;
+   border-radius: 5px;
+   width: 35px;
+   height: 35px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.keys:hover{
+   background-image: url(https://i0.wp.com/eltallerdehector.com/wp-content/uploads/2023/04/Super-Mario-Question-Block.png?fit=1000%2C1000&ssl=1);
+color: rgb(0, 0, 0);
+font-size: 40px;
+}  
+
+
+
+#panel{
+display: flex;
+margin: 10px;
+padding: 10px;
+justify-content: space-around;
+font-size: 30px;
+max-width: 600px;
+}
+
+
+.audio{
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    left: 1000px;
+}
+
+.credits{
+    position: fixed;
+    bottom: 10px;
+    right: 40px;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.container{
+    position: fixed;
+    margin-left: 720px;
+    margin-top: 150px;
+    font-size: 25px;
+}
+
