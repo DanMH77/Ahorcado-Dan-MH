@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ahorcado</title>
     <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/cuerpo.png">
 </head>
 <body>
     
@@ -13,25 +14,45 @@
      <p id="counter" class="counter">7</p>
     </div>
     <div id="panel"></div>
-    
+    <div id="gameover">
+
+        <h4 class="lose"> </h4>
+
+    </div>
+
+   
     <div class="dad">
-        
         <div id="options" class="Keyboard">
             
         </div>
-
-        <div id="photos" class="parts">
-    
+        
+        <div>
+            <img  class="parts" id="photos" src="" alt="">
         </div>
 
     </div>
     
-<audio class="audio" id="song1" autoplay controls loop preload="metadata">
-    <source src="../assets/audios/mario-bross-version-metal-videojuegos-.mp3" type="audio/mp3">
-</audio>
+    
+    <div class="credits"> <h3>by</h3><h1>Daniel MH</h1></div>
+    
+    <audio class="audio" id="song1" autoplay  loop preload="metadata">
+        <source src="../assets/audios/donkey-kong.mp3" type="audio/mp3">
+    </audio>
 
-<div class="credits"> <h3>by</h3><h1>Daniel MH</h1></div>
+    <audio class="audio" id="song2" >
+        <source src="../assets/audios/LOSER.mp3" type="audio/mp3">
+    </audio>
 
-</body>
+    <audio class="audio" id="song3" >
+        <source src="../assets/audios/Oh_Ohh___---_Efecto_de_SonidoMP3_320K.mp3" type="audio/mp3">
+    </audio>
+
+    <audio class="audio" id="song4" >
+        <source src="../assets/audios/victoria.mp3" type="audio/mp3">
+    </audio>
+
+   
+
+
 <script type="module" src="../src/index.js"></script>
 </html>

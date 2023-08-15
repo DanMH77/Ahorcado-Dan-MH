@@ -51,15 +51,10 @@ showInCorrect(letter){
       console.log('correcta');
     }
     else{
-          
+               
     }
   }))
 }
-
-
 }
-// const App = new keyboard();
-// console.log(App.makeKeyboard());
-// App.showCorrect("A");
 
 export {Keyboard};

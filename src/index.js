@@ -1,17 +1,24 @@
 import { Keyboard } from "./keyboard.js";
 import { Panel } from "./panel.js";
+import { BodyParts } from "./bodyParts.js";
+import { Result } from "./ResultClass.js";
 
 const App = new Keyboard();
 const panel = new Panel();
-
+const bodyParts = new BodyParts();
+const result = new Result();
 panel.optionWord();
 const panelVector = panel.drawLines();
 let conta = 7;
+let contaimg = 0;
 const counter = document.getElementById("counter");
 const lettersVector = App.makeKeyboard();
 const options = document.getElementById("options");
+const boton = document.getElementById('boton')
 console.log(options);
 App.showInCorrect("B");
+
+const photos = document.getElementById("photos");
 
 
 const panelH = document.getElementById("panel");
@@ -30,10 +37,28 @@ lettersVector.map((key) => {
     panel.chooseWord(h3.textContent.toLowerCase());
     const change = panel.isTrue(letter.toLowerCase());
     console.log(change);
+
+    const youWin = panel.isAWin();
+
+    if(youWin){
+      result.winner();
+      result.songWin();
+    }
+
    if(!change){
     conta--;
     counter.textContent=conta;
-   }
+    photos.src = bodyParts.insertImage(contaimg);
+    contaimg++;
+  result.songFalse();
+  
+  
+  } 
+    if(conta===0){
+       result.loser();
+       result.songLose();
+    }
+ 
     panelH.textContent = "";
     panelVector.map((lines) => {
       const div = document.createElement("div");
@@ -47,11 +72,10 @@ lettersVector.map((key) => {
   });
 });
 
-import { BodyParts } from "./bodyParts.js";
 
-const bodyParts = new BodyParts();
-const partsVector = bodyParts.insertImage();
-const photos = document.getElementById("photos");
+
+
+
 
 panelVector.map((lines) => {
   const div = document.createElement("div");
