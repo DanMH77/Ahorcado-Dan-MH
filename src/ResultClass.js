@@ -1,3 +1,4 @@
+
 class Result{
     constructor(){
         this.message ="volver a Empezar";
@@ -23,8 +24,8 @@ class Result{
         
           }
           winner (){
+            const word= 'The word was:'+panel.lastletter;
             document.querySelector('.lose').textContent= '¡You Win!';
-           
             var button =document.createElement('button');
             button.type= 'button';
             button.innerHTML='Try Again';
@@ -39,6 +40,8 @@ class Result{
 
               songLose() {
                 var audioLoser= document.getElementById("song2");
+                var audiolos= document.getElementById("song5");
+                audiolos.play();
                 audioLoser.play();
               }
       
@@ -49,7 +52,9 @@ class Result{
      
               songWin() {
                 var audioWin= document.getElementById("song4");
+                var win= document.getElementById("song6");
                 audioWin.play();
+                win.play()
               }
 
    

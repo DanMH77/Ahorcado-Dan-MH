@@ -15,9 +15,11 @@ const counter = document.getElementById("counter");
 const lettersVector = App.makeKeyboard();
 const options = document.getElementById("options");
 const boton = document.getElementById('boton')
+const dad = document.querySelector('.dad')
 console.log(options);
 App.showInCorrect("B");
-
+const word= 'The word was:'+panel.lastletter;
+console.log(word);
 const photos = document.getElementById("photos");
 
 
@@ -33,6 +35,7 @@ lettersVector.map((key) => {
 
   div.addEventListener("click",evento => {
     const letter = evento.target.textContent;
+    evento.target.disabled= true;
 
     panel.chooseWord(h3.textContent.toLowerCase());
     const change = panel.isTrue(letter.toLowerCase());
@@ -43,20 +46,24 @@ lettersVector.map((key) => {
     if(youWin){
       result.winner();
       result.songWin();
+      dad.remove();
     }
 
    if(!change){
+    
+    console.log(evento.target);
     conta--;
     counter.textContent=conta;
     photos.src = bodyParts.insertImage(contaimg);
     contaimg++;
-  result.songFalse();
-  
-  
+    result.songFalse();
+    
+    
   } 
     if(conta===0){
        result.loser();
        result.songLose();
+       dad.remove();
     }
  
     panelH.textContent = "";

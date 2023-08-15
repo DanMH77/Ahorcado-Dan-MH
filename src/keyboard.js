@@ -37,21 +37,15 @@ class Keyboard {
     const array = this.keys.filter((item) => item != letter);
     console.log(array);
     return array;
-    // this.keys.map((key) => {
-    //     if(key == letter){
-    //         console.log('son iguales', key , letter);
-
-    //     }
-    // });
   }
 
 showInCorrect(letter){
-  const array2 = this.keys.map((letraunoporuno =>{
-    if(letraunoporuno == letter){
+  const array2 = this.keys.map((thing =>{
+    if(thing == letter){
       console.log('correcta');
     }
     else{
-               
+            
     }
   }))
 }

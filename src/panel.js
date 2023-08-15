@@ -1,6 +1,6 @@
 class Panel {
   constructor() {
-    this.choiseWord = ["mariobros", "pacman", "sonic", "metalslug"];
+    this.choiseWord = ["mariobros", "pacman", "sonic", "metalslug","doom","tetris","finalfantasy","rayman"];
     this.lastletter = "";
     this.vectAnswer = [];
     this.vectResult = [];
